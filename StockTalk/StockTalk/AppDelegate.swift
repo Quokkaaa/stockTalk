@@ -7,14 +7,27 @@
 
 import UIKit
 import CoreData
+import KakaoSDKCommon
+import KakaoSDKAuth
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    
+    let nativeAppKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] ?? ""
+    
+    KakaoSDK.initSDK(appKey: nativeAppKey as? String ?? "${KAKAO_NATIVE_APP_KEY}")
+    
     return true
+  }
+  
+  // MARK: - 카카오 로그인 접근 (WebView)
+  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+      if (AuthApi.isKakaoTalkLoginUrl(url)) {
+          return AuthController.handleOpenUrl(url: url)
+      }
+
+      return false
   }
 
   // MARK: UISceneSession Lifecycle

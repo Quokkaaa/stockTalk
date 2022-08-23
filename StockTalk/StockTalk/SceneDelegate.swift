@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KakaoSDKAuth
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,6 +18,16 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window?.rootViewController = ViewController()
     window?.makeKeyAndVisible()
   }
+  
+  // MARK: - 카카오 로그인 접근 (WebView) url을 가져와서 url ==. 카카오 schem와 일치하는이 여부를 확인하고 내부로 접근하는 방식으로 보인다.
+  func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+      if let url = URLContexts.first?.url {
+          if (AuthApi.isKakaoTalkLoginUrl(url)) {
+              _ = AuthController.handleOpenUrl(url: url)
+          }
+      }
+  }
+  
   func sceneDidDisconnect(_ scene: UIScene) {}
   func sceneDidBecomeActive(_ scene: UIScene) {}
   func sceneWillResignActive(_ scene: UIScene) {}
