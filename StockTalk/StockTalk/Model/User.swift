@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct User {
+  private let id: UUID
+  private let nickName: String
+  private let loginType: SNSLogin
+  private var isLogin: Bool
+  private var postCount: Int
+  private var follower: Int
+  private var following: Int
+}
