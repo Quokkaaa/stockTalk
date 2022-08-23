@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum SNSLogin {
+  case kakao
+  case naver
+  case apple
+  case google
+}
