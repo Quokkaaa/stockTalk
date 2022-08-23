@@ -8,9 +8,9 @@
 [![swift](https://img.shields.io/badge/swift-5.6-orange)]() [![xcode](https://img.shields.io/badge/Xcode-13.4.1-blue)]() [![iOS](https://img.shields.io/badge/iOS-15.5-red)]()
  
 ## 👨‍🔧 기술스택 
-기술스택 | Design Pattern | LocalDB | Remote DB | Convention | 
+기술스택 | Design Pattern | LocalDB | Remote DB |
 -- | -- | -- | -- | -- |
-UIkit | MVVM | CoreData | FireBase | SwiftLint | 
+UIkit | MVVM | CoreData | FireBase |
  
 ## ✅ 프로젝트 중 핵심경험
 - [ ] SOLID, S원칙을 준수하며 하나의 객체를 분리하자.
