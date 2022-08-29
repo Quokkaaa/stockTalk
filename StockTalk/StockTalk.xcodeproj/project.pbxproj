@@ -97,18 +97,18 @@
 		AB9C96A828B5C144006643E2 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				ABC8944F28BC42E500BC4AD9 /* MyProfile */,
+				ABC8944F28BC42E500BC4AD9 /* Login */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		ABC8944F28BC42E500BC4AD9 /* MyProfile */ = {
+		ABC8944F28BC42E500BC4AD9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				ABC8945028BC431000BC4AD9 /* View */,
 				ABC8945128BC431600BC4AD9 /* ViewModel */,
 			);
-			path = MyProfile;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		ABC8945028BC431000BC4AD9 /* View */ = {
