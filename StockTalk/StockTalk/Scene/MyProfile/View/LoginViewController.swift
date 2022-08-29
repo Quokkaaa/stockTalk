@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  StockTalk
 //
 //  Created by LIMGAUI on 2022/08/23.
@@ -10,7 +10,7 @@ import Combine
 import AuthenticationServices
 
 final class LoginViewController: UIViewController {
-  private let myProfileViewModel = LoginViewModel()
+  private let loginViewModel = LoginViewModel()
   private var subscriptions = Set<AnyCancellable>()
   
   private let stackView: UIStackView = {
@@ -56,16 +56,30 @@ final class LoginViewController: UIViewController {
     return stackView
   }()
   
-  private lazy var kakaoButton = { (_ title: String, _ action: Selector) -> UIButton in
+  private lazy var kakaoButton = { (action: Selector) -> UIButton in
     let button = UIButton()
-    button.setTitle(title, for: .normal)
-    button.configuration = .filled()
+    button.setImage(UIImage(named: "kakao_login_medium_wide"), for: .normal)
     button.addTarget(
       self, action: action, for: .touchUpInside)
     return button
   }
   
-  private lazy var appleLoginButton = ASAuthorizationAppleIDButton()
+  private lazy var appleLoginButton: UIButton = {
+    let button = UIButton()
+    button.backgroundColor = .black
+    button.setTitle(
+        "                       Apple 로그인                        ",
+        for: .normal)
+    button.setTitleColor(UIColor.white, for: .normal)
+    button.setImage(UIImage(named: "apple_logo_medium"), for: .normal)
+    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+    button.layer.cornerRadius = 5
+    button.addTarget(
+      self,
+      action: #selector(appleLoginButtonDidTap),
+      for: .touchUpInside)
+    return button
+  }()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -77,9 +91,9 @@ final class LoginViewController: UIViewController {
   private func configureUI() {
     view.addSubview(stackView)
     
-    let kakaoLoginButton = kakaoButton("카카오 로그인", #selector(kakaoLoginButtonDidTap))
+    let kakaoLoginButton = kakaoButton(#selector(kakaoLoginButtonDidTap))
     
-    appleLoginButton.addTarget(self, action: #selector(appleButtonDidTap), for: .touchUpInside)
+    appleLoginButton.addTarget(self, action: #selector(appleLoginButtonDidTap), for: .touchUpInside)
     
     titleStackView.addArrangedSubview(titleLabel)
     titleStackView.addArrangedSubview(subtitleLabel)
@@ -94,22 +108,11 @@ final class LoginViewController: UIViewController {
   }
   
   @objc private func kakaoLoginButtonDidTap() {
-    myProfileViewModel.loginService?.login()
+    loginViewModel.kakaoLoginButtonDidTap()
   }
   
-  @objc private func kakaoLogoutButtonDidTap() {
-    myProfileViewModel.loginService?.logout()
-  }
-  
-  @objc private func appleButtonDidTap() {
-    let provider = ASAuthorizationAppleIDProvider()
-    let request = provider.createRequest()
-    request.requestedScopes = [.email, .fullName]
-    
-    let controller = ASAuthorizationController(authorizationRequests: [request])
-    controller.delegate = self
-    controller.presentationContextProvider = self
-    controller.performRequests()
+  @objc private func appleLoginButtonDidTap() {
+    loginViewModel.appleLoginButtonDidTap()
   }
 }
 
@@ -123,7 +126,7 @@ private extension LoginViewController {
 //    .store(in: &subscriptions)
     
     // MARK: - 두번째방법 AnyPublisher로 값을 받아서 Label에 꽂아준다.
-    self.myProfileViewModel.loginService?.loginStatusInfo
+    self.loginViewModel.loginService?.loginStatusInfo
       .receive(on: DispatchQueue.main)
       .assign(to: \.text, on: titleLabel)
       .store(in: &subscriptions)
