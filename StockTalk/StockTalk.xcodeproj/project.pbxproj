@@ -23,6 +23,8 @@
 		ABB163DA28BA217B00A5A59A /* AppleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB163D928BA217B00A5A59A /* AppleAuthService.swift */; };
 		ABB163DD28BA2CF000A5A59A /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB163DC28BA2CF000A5A59A /* AuthState.swift */; };
 		ABC8945328BC436100BC4AD9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8945228BC436100BC4AD9 /* LoginViewModel.swift */; };
+		ABC8945D28BCCABF00BC4AD9 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8945C28BCCABF00BC4AD9 /* Storage.swift */; };
+		ABC8946128BCCF5300BC4AD9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8946028BCCF5300BC4AD9 /* LoginView.swift */; };
 		ABFC33FD28B4671B008E87D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC33FC28B4671B008E87D2 /* AppDelegate.swift */; };
 		ABFC33FF28B4671B008E87D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC33FE28B4671B008E87D2 /* SceneDelegate.swift */; };
 		ABFC340128B4671B008E87D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC340028B4671B008E87D2 /* LoginViewController.swift */; };
@@ -41,6 +43,8 @@
 		ABB163DB28BA297700A5A59A /* StockTalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StockTalk.entitlements; sourceTree = "<group>"; };
 		ABB163DC28BA2CF000A5A59A /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		ABC8945228BC436100BC4AD9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		ABC8945C28BCCABF00BC4AD9 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		ABC8946028BCCF5300BC4AD9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ABFC33F928B4671B008E87D2 /* StockTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFC33FC28B4671B008E87D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFC33FE28B4671B008E87D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +82,6 @@
 		AB9C96A428B5BDD5006643E2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				ABC8945828BCC79800BC4AD9 /* UserManager */,
 				AB9C96A728B5C07E006643E2 /* SocialLoginService */,
 			);
 			path = Utils;
@@ -114,6 +117,7 @@
 		ABC8945028BC431000BC4AD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABC8946028BCCF5300BC4AD9 /* LoginView.swift */,
 				ABFC340028B4671B008E87D2 /* LoginViewController.swift */,
 			);
 			path = View;
@@ -127,11 +131,21 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		ABC8945828BCC79800BC4AD9 /* UserManager */ = {
+		ABC8945928BCCA8E00BC4AD9 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				ABC8945C28BCCABF00BC4AD9 /* Storage.swift */,
 			);
-			path = UserManager;
+			path = DB;
+			sourceTree = "<group>";
+		};
+		ABC8945A28BCCA9A00BC4AD9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ABFC33FC28B4671B008E87D2 /* AppDelegate.swift */,
+				ABFC33FE28B4671B008E87D2 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		ABFC33F028B4671B008E87D2 = {
@@ -154,8 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				ABB163DB28BA297700A5A59A /* StockTalk.entitlements */,
-				ABFC33FC28B4671B008E87D2 /* AppDelegate.swift */,
-				ABFC33FE28B4671B008E87D2 /* SceneDelegate.swift */,
+				ABC8945A28BCCA9A00BC4AD9 /* App */,
+				ABC8945928BCCA8E00BC4AD9 /* DB */,
 				AB9C96A828B5C144006643E2 /* Scene */,
 				AB9C96A428B5BDD5006643E2 /* Utils */,
 				ABFC341328B47662008E87D2 /* Model */,
@@ -270,10 +284,12 @@
 				ABFC33FD28B4671B008E87D2 /* AppDelegate.swift in Sources */,
 				AB9C96A628B5BE03006643E2 /* SocialLoginable.swift in Sources */,
 				ABB163DA28BA217B00A5A59A /* AppleAuthService.swift in Sources */,
+				ABC8945D28BCCABF00BC4AD9 /* Storage.swift in Sources */,
 				ABFC340728B4671B008E87D2 /* StockTalk.xcdatamodeld in Sources */,
 				ABFC341528B4768B008E87D2 /* User.swift in Sources */,
 				ABFC341728B4791F008E87D2 /* SNSLogin.swift in Sources */,
 				ABB163DD28BA2CF000A5A59A /* AuthState.swift in Sources */,
+				ABC8946128BCCF5300BC4AD9 /* LoginView.swift in Sources */,
 				AB9C96A328B4D07E006643E2 /* KakaoAuthService.swift in Sources */,
 				ABFC33FF28B4671B008E87D2 /* SceneDelegate.swift in Sources */,
 			);
