@@ -6,21 +6,12 @@
 //
 
 import Foundation
+import Combine
 
 protocol SocialLoginable {
-  var kakaoService: KakaoAuthViewModel { get set }
-  var naverService: String { get set }
-  var appleService: String { get set }
-}
-
-final class SocialLoginService: SocialLoginable {
-  var kakaoService: KakaoAuthViewModel
-  var naverService: String
-  var appleService: String
+  var isLoggedIn: Bool { get set }
+  var loginStatusInfo: AnyPublisher<String?, Never> { get set }
   
-  init(kakaoService: KakaoAuthViewModel, naverService: String, appleService: String) {
-    self.kakaoService = kakaoService
-    self.naverService = naverService
-    self.appleService = appleService
-  }
+  func login()
+  func logout()
 }

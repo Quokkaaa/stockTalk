@@ -10,7 +10,9 @@ import Combine
 import KakaoSDKAuth
 import KakaoSDKUser
 
-final class KakaoAuthService: ObservableObject {
+final class KakaoAuthService: ObservableObject, SocialLoginable {
+  static let shared = KakaoAuthService()
+  
   @Published var isLoggedIn: Bool = false
   
   lazy var loginStatusInfo: AnyPublisher<String?, Never> = $isLoggedIn
@@ -52,7 +54,7 @@ final class KakaoAuthService: ObservableObject {
   }
   
   @MainActor
-  func KakaoLogin() {
+  func login() {
     print("KakaoLogin() called")
     Task {
       // 카카오톡 설치 여부 확인
@@ -67,7 +69,7 @@ final class KakaoAuthService: ObservableObject {
   }
   
   @MainActor
-  func kakaoLogout() {
+  func logout() {
     print("kakaoLogout() called")
     Task {
       if await handleKakaoLogout() {

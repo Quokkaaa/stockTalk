@@ -18,11 +18,14 @@
 		AB9C969A28B4C391006643E2 /* KakaoSDKTemplate in Frameworks */ = {isa = PBXBuildFile; productRef = AB9C969928B4C391006643E2 /* KakaoSDKTemplate */; };
 		AB9C969C28B4C391006643E2 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = AB9C969B28B4C391006643E2 /* KakaoSDKUser */; };
 		AB9C969F28B4C8C1006643E2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB9C969E28B4C8C1006643E2 /* SnapKit */; };
-		AB9C96A328B4D07E006643E2 /* KakaoAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9C96A228B4D07E006643E2 /* KakaoAuthViewModel.swift */; };
+		AB9C96A328B4D07E006643E2 /* KakaoAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9C96A228B4D07E006643E2 /* KakaoAuthService.swift */; };
 		AB9C96A628B5BE03006643E2 /* SocialLoginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9C96A528B5BE03006643E2 /* SocialLoginable.swift */; };
+		ABB163DA28BA217B00A5A59A /* AppleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB163D928BA217B00A5A59A /* AppleAuthService.swift */; };
+		ABB163DD28BA2CF000A5A59A /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB163DC28BA2CF000A5A59A /* AuthState.swift */; };
+		ABC8945328BC436100BC4AD9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8945228BC436100BC4AD9 /* LoginViewModel.swift */; };
 		ABFC33FD28B4671B008E87D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC33FC28B4671B008E87D2 /* AppDelegate.swift */; };
 		ABFC33FF28B4671B008E87D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC33FE28B4671B008E87D2 /* SceneDelegate.swift */; };
-		ABFC340128B4671B008E87D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC340028B4671B008E87D2 /* ViewController.swift */; };
+		ABFC340128B4671B008E87D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC340028B4671B008E87D2 /* LoginViewController.swift */; };
 		ABFC340728B4671B008E87D2 /* StockTalk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABFC340528B4671B008E87D2 /* StockTalk.xcdatamodeld */; };
 		ABFC340928B4671C008E87D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABFC340828B4671C008E87D2 /* Assets.xcassets */; };
 		ABFC340C28B4671C008E87D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABFC340A28B4671C008E87D2 /* LaunchScreen.storyboard */; };
@@ -32,12 +35,16 @@
 
 /* Begin PBXFileReference section */
 		AB9C96A028B4CAE9006643E2 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		AB9C96A228B4D07E006643E2 /* KakaoAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthViewModel.swift; sourceTree = "<group>"; };
+		AB9C96A228B4D07E006643E2 /* KakaoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthService.swift; sourceTree = "<group>"; };
 		AB9C96A528B5BE03006643E2 /* SocialLoginable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginable.swift; sourceTree = "<group>"; };
+		ABB163D928BA217B00A5A59A /* AppleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthService.swift; sourceTree = "<group>"; };
+		ABB163DB28BA297700A5A59A /* StockTalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StockTalk.entitlements; sourceTree = "<group>"; };
+		ABB163DC28BA2CF000A5A59A /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		ABC8945228BC436100BC4AD9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ABFC33F928B4671B008E87D2 /* StockTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFC33FC28B4671B008E87D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFC33FE28B4671B008E87D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ABFC340028B4671B008E87D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABFC340028B4671B008E87D2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ABFC340628B4671B008E87D2 /* StockTalk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StockTalk.xcdatamodel; sourceTree = "<group>"; };
 		ABFC340828B4671C008E87D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABFC340B28B4671C008E87D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,17 +75,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB9C96A128B4D063006643E2 /* KakaoAuthViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				AB9C96A228B4D07E006643E2 /* KakaoAuthViewModel.swift */,
-			);
-			path = KakaoAuthViewModel;
-			sourceTree = "<group>";
-		};
 		AB9C96A428B5BDD5006643E2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ABC8945828BCC79800BC4AD9 /* UserManager */,
 				AB9C96A728B5C07E006643E2 /* SocialLoginService */,
 			);
 			path = Utils;
@@ -88,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				AB9C96A528B5BE03006643E2 /* SocialLoginable.swift */,
+				AB9C96A228B4D07E006643E2 /* KakaoAuthService.swift */,
+				ABB163D928BA217B00A5A59A /* AppleAuthService.swift */,
 			);
 			path = SocialLoginService;
 			sourceTree = "<group>";
@@ -95,8 +97,41 @@
 		AB9C96A828B5C144006643E2 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				ABC8944F28BC42E500BC4AD9 /* MyProfile */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		ABC8944F28BC42E500BC4AD9 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				ABC8945028BC431000BC4AD9 /* View */,
+				ABC8945128BC431600BC4AD9 /* ViewModel */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		ABC8945028BC431000BC4AD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABFC340028B4671B008E87D2 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABC8945128BC431600BC4AD9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ABC8945228BC436100BC4AD9 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ABC8945828BCC79800BC4AD9 /* UserManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserManager;
 			sourceTree = "<group>";
 		};
 		ABFC33F028B4671B008E87D2 = {
@@ -118,11 +153,10 @@
 		ABFC33FB28B4671B008E87D2 /* StockTalk */ = {
 			isa = PBXGroup;
 			children = (
+				ABB163DB28BA297700A5A59A /* StockTalk.entitlements */,
 				ABFC33FC28B4671B008E87D2 /* AppDelegate.swift */,
 				ABFC33FE28B4671B008E87D2 /* SceneDelegate.swift */,
 				AB9C96A828B5C144006643E2 /* Scene */,
-				ABFC340028B4671B008E87D2 /* ViewController.swift */,
-				AB9C96A128B4D063006643E2 /* KakaoAuthViewModel */,
 				AB9C96A428B5BDD5006643E2 /* Utils */,
 				ABFC341328B47662008E87D2 /* Model */,
 				ABFC340828B4671C008E87D2 /* Assets.xcassets */,
@@ -139,6 +173,7 @@
 			children = (
 				ABFC341428B4768B008E87D2 /* User.swift */,
 				ABFC341628B4791F008E87D2 /* SNSLogin.swift */,
+				ABB163DC28BA2CF000A5A59A /* AuthState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,13 +265,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABFC340128B4671B008E87D2 /* ViewController.swift in Sources */,
+				ABFC340128B4671B008E87D2 /* LoginViewController.swift in Sources */,
+				ABC8945328BC436100BC4AD9 /* LoginViewModel.swift in Sources */,
 				ABFC33FD28B4671B008E87D2 /* AppDelegate.swift in Sources */,
 				AB9C96A628B5BE03006643E2 /* SocialLoginable.swift in Sources */,
+				ABB163DA28BA217B00A5A59A /* AppleAuthService.swift in Sources */,
 				ABFC340728B4671B008E87D2 /* StockTalk.xcdatamodeld in Sources */,
 				ABFC341528B4768B008E87D2 /* User.swift in Sources */,
 				ABFC341728B4791F008E87D2 /* SNSLogin.swift in Sources */,
-				AB9C96A328B4D07E006643E2 /* KakaoAuthViewModel.swift in Sources */,
+				ABB163DD28BA2CF000A5A59A /* AuthState.swift in Sources */,
+				AB9C96A328B4D07E006643E2 /* KakaoAuthService.swift in Sources */,
 				ABFC33FF28B4671B008E87D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StockTalk/StockTalk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S22CZ64YL7;
@@ -405,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StockTalk/StockTalk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S22CZ64YL7;

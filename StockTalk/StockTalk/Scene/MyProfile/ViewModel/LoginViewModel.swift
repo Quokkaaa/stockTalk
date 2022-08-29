@@ -38,5 +38,6 @@ final class LoginViewModel {
   private func createAppleUser() {
     user = User(id: UUID().uuidString, nickName: "", loginType: .apple, isLogin: true, postCount: 0, follower: 0, following: 0)
   }
+  
   // MARK: - Output
 }
