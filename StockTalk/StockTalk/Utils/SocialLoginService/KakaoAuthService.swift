@@ -10,7 +10,7 @@ import Combine
 import KakaoSDKAuth
 import KakaoSDKUser
 
-final class KakaoAuthViewModel: ObservableObject {
+final class KakaoAuthService: ObservableObject {
   @Published var isLoggedIn: Bool = false
   
   lazy var loginStatusInfo: AnyPublisher<String?, Never> = $isLoggedIn
