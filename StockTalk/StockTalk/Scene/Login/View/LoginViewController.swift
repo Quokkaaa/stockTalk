@@ -5,7 +5,6 @@
 //  Created by LIMGAUI on 2022/08/23.
 
 import UIKit
-import SnapKit
 import Combine
 import AuthenticationServices
 
