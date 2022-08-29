@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SNSLogin {
-  case kakao
-  case apple
+enum SNSLogin: String {
+  case kakao = "kakao"
+  case apple = "apple"
 }
