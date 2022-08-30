@@ -23,6 +23,11 @@ final class LoginViewModel {
     loginService?.login()
   }
   
+  func googleLoginButtonDidTap() {
+    googleLoginOn()
+    loginService?.login()
+  }
+  
   private func kakaoLoginOn() {
     loginService = KakaoAuthService.shared
   }
@@ -31,12 +36,16 @@ final class LoginViewModel {
     loginService = AppleAuthService.shared
   }
   
+  private func googleLoginOn() {
+    loginService = GoogleAuthService.shared
+  }
+  
   private func createKakaoUser() {
-    user = User(id: UUID().uuidString, nickName: "", loginType: .kakao, isLogin: true, postCount: 0, follower: 0, following: 0)
+    user = User(id: UUID().uuidString, nickName: "", signedInType: .kakao, isLogin: true, postCount: 0, follower: 0, following: 0)
   }
   
   private func createAppleUser() {
-    user = User(id: UUID().uuidString, nickName: "", loginType: .apple, isLogin: true, postCount: 0, follower: 0, following: 0)
+    user = User(id: UUID().uuidString, nickName: "", signedInType: .apple, isLogin: true, postCount: 0, follower: 0, following: 0)
   }
   
   // MARK: - Output

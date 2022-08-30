@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import KakaoSDKCommon
 import KakaoSDKAuth
+import GoogleSignIn
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +17,19 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let nativeAppKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] ?? ""
     
+    // 카카오
     KakaoSDK.initSDK(appKey: nativeAppKey as? String ?? "${KAKAO_NATIVE_APP_KEY}")
     
+    // 구글
+    GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+      if error != nil || user == nil {
+        // Show the app's signed-out state.
+        print("Signed-out")
+      } else {
+        // Show the app's signed-in state.
+        print("Signed-in")
+      }
+    }
     return true
   }
   
@@ -28,6 +40,24 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
       }
 
       return false
+  }
+  
+  // MARK: - 구글 로그인 접근 (webView)
+  func applicationGoogle(
+    _ app: UIApplication,
+    open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+  ) -> Bool {
+    var handled: Bool
+
+    handled = GIDSignIn.sharedInstance.handle(url)
+    if handled {
+      return true
+    }
+
+    // Handle other custom URL types.
+
+    // If not handled by this app, return false.
+    return false
   }
 
   // MARK: UISceneSession Lifecycle

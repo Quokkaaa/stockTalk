@@ -91,4 +91,16 @@ final class KakaoAuthService: ObservableObject, SocialLoginable {
       }
     })
   }
+  
+  private func setUserInfo() {
+    UserApi.shared.me { user, error in
+      if let error = error {
+        print(error)
+      } else {
+        print("Successed")
+        _ = user
+        
+      }
+    }
+  }
 }

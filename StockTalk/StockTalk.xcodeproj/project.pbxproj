@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB32603A28BE16EB007CB4D1 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB32603928BE16EB007CB4D1 /* CoreDataService.swift */; };
 		AB9C968A28B4C391006643E2 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = AB9C968928B4C391006643E2 /* KakaoSDK */; };
 		AB9C968C28B4C391006643E2 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB9C968B28B4C391006643E2 /* KakaoSDKAuth */; };
 		AB9C968E28B4C391006643E2 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = AB9C968D28B4C391006643E2 /* KakaoSDKCommon */; };
@@ -26,6 +27,9 @@
 		ABC8945D28BCCABF00BC4AD9 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8945C28BCCABF00BC4AD9 /* Storage.swift */; };
 		ABC8946128BCCF5300BC4AD9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8946028BCCF5300BC4AD9 /* LoginView.swift */; };
 		ABC8946328BCD4B300BC4AD9 /* GoogleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8946228BCD4B300BC4AD9 /* GoogleAuthService.swift */; };
+		ABC8946628BCD54400BC4AD9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = ABC8946528BCD54400BC4AD9 /* GoogleSignIn */; };
+		ABC8946828BCD54400BC4AD9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ABC8946728BCD54400BC4AD9 /* GoogleSignInSwift */; };
+		ABC8946A28BCDE4C00BC4AD9 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABC8946928BCDE4C00BC4AD9 /* credentials.plist */; };
 		ABFC33FD28B4671B008E87D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC33FC28B4671B008E87D2 /* AppDelegate.swift */; };
 		ABFC33FF28B4671B008E87D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC33FE28B4671B008E87D2 /* SceneDelegate.swift */; };
 		ABFC340128B4671B008E87D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC340028B4671B008E87D2 /* LoginViewController.swift */; };
@@ -37,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB32603928BE16EB007CB4D1 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		AB9C96A028B4CAE9006643E2 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		AB9C96A228B4D07E006643E2 /* KakaoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthService.swift; sourceTree = "<group>"; };
 		AB9C96A528B5BE03006643E2 /* SocialLoginable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginable.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		ABC8945C28BCCABF00BC4AD9 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		ABC8946028BCCF5300BC4AD9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ABC8946228BCD4B300BC4AD9 /* GoogleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthService.swift; sourceTree = "<group>"; };
+		ABC8946928BCDE4C00BC4AD9 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = credentials.plist; path = ../../../../../Downloads/credentials.plist; sourceTree = "<group>"; };
 		ABFC33F928B4671B008E87D2 /* StockTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFC33FC28B4671B008E87D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFC33FE28B4671B008E87D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,8 @@
 				AB9C969028B4C391006643E2 /* KakaoSDKCommonCore in Frameworks */,
 				AB9C969228B4C391006643E2 /* KakaoSDKNavi in Frameworks */,
 				AB9C969628B4C391006643E2 /* KakaoSDKStory in Frameworks */,
+				ABC8946828BCD54400BC4AD9 /* GoogleSignInSwift in Frameworks */,
+				ABC8946628BCD54400BC4AD9 /* GoogleSignIn in Frameworks */,
 				AB9C969A28B4C391006643E2 /* KakaoSDKTemplate in Frameworks */,
 				AB9C968E28B4C391006643E2 /* KakaoSDKCommon in Frameworks */,
 				AB9C968C28B4C391006643E2 /* KakaoSDKAuth in Frameworks */,
@@ -81,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB32603828BE16D3007CB4D1 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				AB32603928BE16EB007CB4D1 /* CoreDataService.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		AB9C96A428B5BDD5006643E2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				ABC8945C28BCCABF00BC4AD9 /* Storage.swift */,
+				AB32603828BE16D3007CB4D1 /* Local */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -171,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				ABB163DB28BA297700A5A59A /* StockTalk.entitlements */,
+				ABC8946928BCDE4C00BC4AD9 /* credentials.plist */,
 				ABC8945A28BCCA9A00BC4AD9 /* App */,
 				ABC8945928BCCA8E00BC4AD9 /* DB */,
 				AB9C96A828B5C144006643E2 /* Scene */,
@@ -223,6 +241,8 @@
 				AB9C969928B4C391006643E2 /* KakaoSDKTemplate */,
 				AB9C969B28B4C391006643E2 /* KakaoSDKUser */,
 				AB9C969E28B4C8C1006643E2 /* SnapKit */,
+				ABC8946528BCD54400BC4AD9 /* GoogleSignIn */,
+				ABC8946728BCD54400BC4AD9 /* GoogleSignInSwift */,
 			);
 			productName = StockTalk;
 			productReference = ABFC33F928B4671B008E87D2 /* StockTalk.app */;
@@ -255,6 +275,7 @@
 			packageReferences = (
 				AB9C968828B4C391006643E2 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				AB9C969D28B4C8C1006643E2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				ABC8946428BCD54400BC4AD9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = ABFC33FA28B4671B008E87D2 /* Products */;
 			projectDirPath = "";
@@ -271,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABFC340C28B4671C008E87D2 /* LaunchScreen.storyboard in Resources */,
+				ABC8946A28BCDE4C00BC4AD9 /* credentials.plist in Resources */,
 				ABFC340928B4671C008E87D2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +311,7 @@
 				ABC8946328BCD4B300BC4AD9 /* GoogleAuthService.swift in Sources */,
 				ABB163DA28BA217B00A5A59A /* AppleAuthService.swift in Sources */,
 				ABC8945D28BCCABF00BC4AD9 /* Storage.swift in Sources */,
+				AB32603A28BE16EB007CB4D1 /* CoreDataService.swift in Sources */,
 				ABFC340728B4671B008E87D2 /* StockTalk.xcdatamodeld in Sources */,
 				ABFC341528B4768B008E87D2 /* User.swift in Sources */,
 				ABFC341728B4791F008E87D2 /* SNSLogin.swift in Sources */,
@@ -527,6 +550,14 @@
 				kind = branch;
 			};
 		};
+		ABC8946428BCD54400BC4AD9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -584,6 +615,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB9C969D28B4C8C1006643E2 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		ABC8946528BCD54400BC4AD9 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABC8946428BCD54400BC4AD9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		ABC8946728BCD54400BC4AD9 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABC8946428BCD54400BC4AD9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 

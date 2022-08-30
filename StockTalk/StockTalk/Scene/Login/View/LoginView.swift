@@ -7,11 +7,13 @@
 
 import UIKit
 import SnapKit
+import GoogleSignIn
+import AuthenticationServices
 
 final class LoginView: UIView {
   private let stackView: UIStackView = {
     let stackView = UIStackView()
-    stackView.spacing = 150
+    stackView.spacing = 200
     stackView.axis = .vertical
     stackView.alignment = .center
     stackView.distribution = .fill
@@ -71,6 +73,12 @@ final class LoginView: UIView {
     return button
   }()
   
+  lazy var googleLoginButton: UIButton = {
+    let button = UIButton()
+    button.setImage(UIImage(named: "google_login_small"), for: .normal)
+    return button
+  }()
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     backgroundColor = .systemBackground
@@ -88,6 +96,7 @@ final class LoginView: UIView {
     titleStackView.addArrangedSubview(subtitleLabel)
     buttonStackView.addArrangedSubview(kakaoLoginButton)
     buttonStackView.addArrangedSubview(appleLoginButton)
+    buttonStackView.addArrangedSubview(googleLoginButton)
     stackView.addArrangedSubview(titleStackView)
     stackView.addArrangedSubview(buttonStackView)
     

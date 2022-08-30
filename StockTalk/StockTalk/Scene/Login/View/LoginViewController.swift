@@ -7,6 +7,7 @@
 import UIKit
 import Combine
 import AuthenticationServices
+import GoogleSignIn
 
 final class LoginViewController: UIViewController {
   private let loginViewModel = LoginViewModel()
@@ -34,6 +35,11 @@ final class LoginViewController: UIViewController {
       self,
       action: #selector(kakaoLoginButtonDidTap),
       for: .touchUpInside)
+    
+    loginView.googleLoginButton.addTarget(
+      self,
+      action: #selector(googleLoginButtonDidTap),
+      for: .touchUpInside)
   }
   
   @objc private func kakaoLoginButtonDidTap() {
@@ -42,6 +48,17 @@ final class LoginViewController: UIViewController {
   
   @objc private func appleLoginButtonDidTap() {
     loginViewModel.appleLoginButtonDidTap()
+  }
+  
+  @objc private func googleLoginButtonDidTap() {
+    let signInConfig = GIDConfiguration(clientID: "717599841233-070ivonhg5f1khnkkj4jgvpakg2vi4uj.apps.googleusercontent.com")
+    
+    GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
+      guard error == nil else { return }
+
+      // If sign in succeeded, display the app's main content View.
+      print("Succeeded")
+    }
   }
 }
 

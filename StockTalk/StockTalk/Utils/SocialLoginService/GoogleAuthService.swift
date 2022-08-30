@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import GoogleSignIn
 
 final class GoogleAuthService: SocialLoginable {
   static let shared = GoogleAuthService()
@@ -16,11 +17,9 @@ final class GoogleAuthService: SocialLoginable {
   lazy var loginStatusInfo: AnyPublisher<String?, Never> = $isLoggedIn
     .compactMap { $0 ? "로그인 상태" : "로그아웃 상태" }.eraseToAnyPublisher()
   
-  func login() {
-    //
-  }
+  func login() {}
   
   func logout() {
-    //
+    GIDSignIn.sharedInstance.signOut()
   }
 }

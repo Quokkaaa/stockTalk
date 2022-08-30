@@ -10,7 +10,7 @@ import Foundation
 struct User {
   let id: String
   let nickName: String
-  let loginType: SNSLogin
+  let signedInType: SNSLogin
   var isLogin: Bool
   var postCount: Int
   var follower: Int
