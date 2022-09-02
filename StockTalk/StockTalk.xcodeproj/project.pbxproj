@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AB32603A28BE16EB007CB4D1 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB32603928BE16EB007CB4D1 /* CoreDataService.swift */; };
+		AB32603D28BE1A27007CB4D1 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB32603B28BE1A27007CB4D1 /* UserModel.xcdatamodeld */; };
+		AB32604828BE1D3B007CB4D1 /* UserModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB32604628BE1D3B007CB4D1 /* UserModel+CoreDataClass.swift */; };
+		AB32604928BE1D3B007CB4D1 /* UserModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB32604728BE1D3B007CB4D1 /* UserModel+CoreDataProperties.swift */; };
 		AB9C968A28B4C391006643E2 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = AB9C968928B4C391006643E2 /* KakaoSDK */; };
 		AB9C968C28B4C391006643E2 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB9C968B28B4C391006643E2 /* KakaoSDKAuth */; };
 		AB9C968E28B4C391006643E2 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = AB9C968D28B4C391006643E2 /* KakaoSDKCommon */; };
@@ -42,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		AB32603928BE16EB007CB4D1 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		AB32603C28BE1A27007CB4D1 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
+		AB32604628BE1D3B007CB4D1 /* UserModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		AB32604728BE1D3B007CB4D1 /* UserModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		AB9C96A028B4CAE9006643E2 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		AB9C96A228B4D07E006643E2 /* KakaoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthService.swift; sourceTree = "<group>"; };
 		AB9C96A528B5BE03006643E2 /* SocialLoginable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginable.swift; sourceTree = "<group>"; };
@@ -92,6 +98,9 @@
 		AB32603828BE16D3007CB4D1 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				AB32603B28BE1A27007CB4D1 /* UserModel.xcdatamodeld */,
+				AB32604628BE1D3B007CB4D1 /* UserModel+CoreDataClass.swift */,
+				AB32604728BE1D3B007CB4D1 /* UserModel+CoreDataProperties.swift */,
 				AB32603928BE16EB007CB4D1 /* CoreDataService.swift */,
 			);
 			path = Local;
@@ -314,10 +323,13 @@
 				AB32603A28BE16EB007CB4D1 /* CoreDataService.swift in Sources */,
 				ABFC340728B4671B008E87D2 /* StockTalk.xcdatamodeld in Sources */,
 				ABFC341528B4768B008E87D2 /* User.swift in Sources */,
+				AB32604928BE1D3B007CB4D1 /* UserModel+CoreDataProperties.swift in Sources */,
 				ABFC341728B4791F008E87D2 /* SNSLogin.swift in Sources */,
 				ABB163DD28BA2CF000A5A59A /* AuthState.swift in Sources */,
+				AB32604828BE1D3B007CB4D1 /* UserModel+CoreDataClass.swift in Sources */,
 				ABC8946128BCCF5300BC4AD9 /* LoginView.swift in Sources */,
 				AB9C96A328B4D07E006643E2 /* KakaoAuthService.swift in Sources */,
+				AB32603D28BE1A27007CB4D1 /* UserModel.xcdatamodeld in Sources */,
 				ABFC33FF28B4671B008E87D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,6 +641,16 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
+		AB32603B28BE1A27007CB4D1 /* UserModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AB32603C28BE1A27007CB4D1 /* UserModel.xcdatamodel */,
+			);
+			currentVersion = AB32603C28BE1A27007CB4D1 /* UserModel.xcdatamodel */;
+			path = UserModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		ABFC340528B4671B008E87D2 /* StockTalk.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

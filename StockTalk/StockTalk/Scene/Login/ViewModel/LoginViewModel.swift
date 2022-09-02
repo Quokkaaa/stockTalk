@@ -41,11 +41,11 @@ final class LoginViewModel {
   }
   
   private func createKakaoUser() {
-    user = User(id: UUID().uuidString, nickName: "", signedInType: .kakao, isLogin: true, postCount: 0, follower: 0, following: 0)
+    user = User(id: UUID().uuidString, nickName: "", socialLoginType: .kakao, createdAt: Date.now, isLogin: true, postCount: 0, followerCount: 0, followingCount: 0)
   }
   
   private func createAppleUser() {
-    user = User(id: UUID().uuidString, nickName: "", signedInType: .apple, isLogin: true, postCount: 0, follower: 0, following: 0)
+    user = User(id: UUID().uuidString, nickName: "", socialLoginType: .apple, createdAt: Date.now, isLogin: true, postCount: 0, followerCount: 0, followingCount: 0)
   }
   
   // MARK: - Output
