@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class User {
+final class User {
   let id: String
   let nickName: String
   let socialLoginType: SNSLogin

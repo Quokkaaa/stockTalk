@@ -9,48 +9,45 @@ import Foundation
 
 final class LoginViewModel {
   // 사용자 타입이 생성되야하는 상황 - 게시글작성, 또는 내 정보에서 로그인버튼 누를때
-  var user: User?
+  var socialLoginType: SNSLogin?
   var loginService: SocialLoginable?
-  let localDB: StorageType
-  
-  init(localDB: StorageType = CoreDataService.shared) {
-    self.localDB = localDB
-  }
   
   // MARK: - Input
+  
   func kakaoLoginButtonDidTap() {
-    kakaoLoginOn()
+    setAuthServiceOn(to: .kakao)
     loginService?.login()
+    createSNSLoginType(.kakao)
   }
   
   func appleLoginButtonDidTap() {
-    appleLoginOn()
+    setAuthServiceOn(to: .apple)
     loginService?.login()
+    createSNSLoginType(.apple)
   }
   
   func googleLoginButtonDidTap() {
-    googleLoginOn()
+    setAuthServiceOn(to: .google)
     loginService?.login()
+    createSNSLoginType(.google)
   }
   
-  private func kakaoLoginOn() {
-    loginService = KakaoAuthService.shared
+  private func setAuthServiceOn(to snsType: SNSLogin) {
+    if snsType == .kakao {
+      loginService = KakaoAuthService.shared
+    }
+    
+    if snsType == .apple {
+      loginService = AppleAuthService.shared
+    }
+    
+    if snsType == .google {
+      loginService = GoogleAuthService.shared
+    }
   }
   
-  private func appleLoginOn() {
-    loginService = AppleAuthService.shared
-  }
-  
-  private func googleLoginOn() {
-    loginService = GoogleAuthService.shared
-  }
-  
-  private func createKakaoUser() {
-    user = User(id: UUID().uuidString, nickName: "", socialLoginType: .kakao, createdAt: Date.now, isLogin: true, postCount: 0, followerCount: 0, followingCount: 0)
-  }
-  
-  private func createAppleUser() {
-    user = User(id: UUID().uuidString, nickName: "", socialLoginType: .apple, createdAt: Date.now, isLogin: true, postCount: 0, followerCount: 0, followingCount: 0)
+  private func createSNSLoginType(_ snsType: SNSLogin) {
+    socialLoginType = snsType
   }
   
   // MARK: - Output
