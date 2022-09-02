@@ -125,21 +125,21 @@
 			path = SocialLoginService;
 			sourceTree = "<group>";
 		};
-		AB9C96A828B5C144006643E2 /* Scene */ = {
+		AB9C96A828B5C144006643E2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				ABC8944F28BC42E500BC4AD9 /* Login */,
+				ABC8944F28BC42E500BC4AD9 /* LoginScene */,
 			);
-			path = Scene;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		ABC8944F28BC42E500BC4AD9 /* Login */ = {
+		ABC8944F28BC42E500BC4AD9 /* LoginScene */ = {
 			isa = PBXGroup;
 			children = (
 				ABC8945028BC431000BC4AD9 /* View */,
 				ABC8945128BC431600BC4AD9 /* ViewModel */,
 			);
-			path = Login;
+			path = LoginScene;
 			sourceTree = "<group>";
 		};
 		ABC8945028BC431000BC4AD9 /* View */ = {
@@ -200,7 +200,7 @@
 				ABC8946928BCDE4C00BC4AD9 /* credentials.plist */,
 				ABC8945A28BCCA9A00BC4AD9 /* App */,
 				ABC8945928BCCA8E00BC4AD9 /* DB */,
-				AB9C96A828B5C144006643E2 /* Scene */,
+				AB9C96A828B5C144006643E2 /* Presentation */,
 				AB9C96A428B5BDD5006643E2 /* Utils */,
 				ABFC341328B47662008E87D2 /* Model */,
 				ABFC340828B4671C008E87D2 /* Assets.xcassets */,

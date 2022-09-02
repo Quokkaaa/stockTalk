@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import CoreData
 
-final class CoreDataService {
+final class CoreDataService: StorageType {
   static let shared = CoreDataService()
   private var users = CurrentValueSubject<[User], Never>([])
   

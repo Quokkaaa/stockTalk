@@ -8,9 +8,9 @@
 import Foundation
 import Combine
 
-//protocol StorageType {
+protocol StorageType {
 //  func create<T>(_ item: T)
 //  func read<T>() -> [T]
 //  func update<T>(_ item: T)
 //  func delete<T>(_ item: T)
-//}
+}

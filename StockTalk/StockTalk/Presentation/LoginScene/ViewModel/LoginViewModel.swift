@@ -11,6 +11,11 @@ final class LoginViewModel {
   // 사용자 타입이 생성되야하는 상황 - 게시글작성, 또는 내 정보에서 로그인버튼 누를때
   var user: User?
   var loginService: SocialLoginable?
+  let localDB: StorageType
+  
+  init(localDB: StorageType = CoreDataService.shared) {
+    self.localDB = localDB
+  }
   
   // MARK: - Input
   func kakaoLoginButtonDidTap() {
