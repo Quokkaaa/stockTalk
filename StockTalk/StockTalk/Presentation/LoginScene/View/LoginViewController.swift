@@ -10,7 +10,7 @@ import AuthenticationServices
 import GoogleSignIn
 
 final class LoginViewController: UIViewController {
-  private let loginViewModel = LoginViewModel()
+  private let viewModel = LoginViewModel()
   private var subscriptions = Set<AnyCancellable>()
   private let loginView = LoginView(frame: .zero)
   
@@ -43,11 +43,13 @@ final class LoginViewController: UIViewController {
   }
   
   @objc private func kakaoLoginButtonDidTap() {
-    loginViewModel.kakaoLoginButtonDidTap()
+    viewModel.kakaoLoginButtonDidTap()
+    moveToNickNameSetViewController()
   }
   
   @objc private func appleLoginButtonDidTap() {
-    loginViewModel.appleLoginButtonDidTap()
+    viewModel.appleLoginButtonDidTap()
+    moveToNickNameSetViewController()
   }
   
   @objc private func googleLoginButtonDidTap() {
@@ -55,10 +57,18 @@ final class LoginViewController: UIViewController {
     
     GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
       guard error == nil else { return }
-
-      // If sign in succeeded, display the app's main content View.
       print("Succeeded")
     }
+    moveToNickNameSetViewController()
+  }
+  
+  private func moveToNickNameSetViewController() {
+    guard let loginType = viewModel.socialLoginType else {
+      return
+    }
+    
+    let nickNameSetVC = NickNameSetViewController(loginType: loginType)
+    navigationController?.pushViewController(nickNameSetVC, animated: true)
   }
 }
 
@@ -72,7 +82,7 @@ private extension LoginViewController {
 //    .store(in: &subscriptions)
     
     // MARK: - 두번째방법 AnyPublisher로 값을 받아서 Label에 꽂아준다.
-    self.loginViewModel.loginService?.loginStatusInfo
+    self.viewModel.loginService?.loginStatusInfo
       .receive(on: DispatchQueue.main)
       .assign(to: \.text, on: loginView.titleLabel)
       .store(in: &subscriptions)

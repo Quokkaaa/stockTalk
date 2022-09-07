@@ -44,7 +44,7 @@ final class CoreDataService: StorageType {
     }
   }
   
-  func create<T: UserModel>(_ item: T) {
+  func create<T: User>(_ item: T) {
     let userEntity = NSEntityDescription.entity(forEntityName: "UserModel", in: viewContext)
     
     if let userEntity = userEntity {
@@ -108,6 +108,12 @@ final class CoreDataService: StorageType {
       _ = read()
     } catch {
       fatalError()
+    }
+  }
+  
+  func findUser(from nickName: String) -> User? {
+    return users.value.first { user in
+      user.nickName == nickName
     }
   }
   

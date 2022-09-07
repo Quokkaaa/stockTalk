@@ -16,20 +16,20 @@ final class LoginViewModel {
   
   func kakaoLoginButtonDidTap() {
     setAuthServiceOn(to: .kakao)
-    loginService?.login()
     createSNSLoginType(.kakao)
+    loginService?.login()
   }
   
   func appleLoginButtonDidTap() {
     setAuthServiceOn(to: .apple)
-    loginService?.login()
     createSNSLoginType(.apple)
+    loginService?.login()
   }
   
   func googleLoginButtonDidTap() {
     setAuthServiceOn(to: .google)
-    loginService?.login()
     createSNSLoginType(.google)
+    loginService?.login()
   }
   
   private func setAuthServiceOn(to snsType: SNSLogin) {
