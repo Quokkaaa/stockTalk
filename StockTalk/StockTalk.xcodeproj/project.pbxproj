@@ -24,6 +24,8 @@
 		AB9C969F28B4C8C1006643E2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB9C969E28B4C8C1006643E2 /* SnapKit */; };
 		AB9C96A328B4D07E006643E2 /* KakaoAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9C96A228B4D07E006643E2 /* KakaoAuthService.swift */; };
 		AB9C96A628B5BE03006643E2 /* SocialLoginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9C96A528B5BE03006643E2 /* SocialLoginable.swift */; };
+		ABA79D1928C1F48B0015D872 /* NickNameSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA79D1828C1F48B0015D872 /* NickNameSetViewController.swift */; };
+		ABA79D1B28C1F5F10015D872 /* NickNameSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA79D1A28C1F5F10015D872 /* NickNameSetViewModel.swift */; };
 		ABB163DA28BA217B00A5A59A /* AppleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB163D928BA217B00A5A59A /* AppleAuthService.swift */; };
 		ABB163DD28BA2CF000A5A59A /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB163DC28BA2CF000A5A59A /* AuthState.swift */; };
 		ABC8945328BC436100BC4AD9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8945228BC436100BC4AD9 /* LoginViewModel.swift */; };
@@ -51,6 +53,8 @@
 		AB9C96A028B4CAE9006643E2 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		AB9C96A228B4D07E006643E2 /* KakaoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthService.swift; sourceTree = "<group>"; };
 		AB9C96A528B5BE03006643E2 /* SocialLoginable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginable.swift; sourceTree = "<group>"; };
+		ABA79D1828C1F48B0015D872 /* NickNameSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameSetViewController.swift; sourceTree = "<group>"; };
+		ABA79D1A28C1F5F10015D872 /* NickNameSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameSetViewModel.swift; sourceTree = "<group>"; };
 		ABB163D928BA217B00A5A59A /* AppleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthService.swift; sourceTree = "<group>"; };
 		ABB163DB28BA297700A5A59A /* StockTalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StockTalk.entitlements; sourceTree = "<group>"; };
 		ABB163DC28BA2CF000A5A59A /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
@@ -129,8 +133,34 @@
 			isa = PBXGroup;
 			children = (
 				ABC8944F28BC42E500BC4AD9 /* LoginScene */,
+				ABA79D1528C1F25F0015D872 /* NickNameSetScene */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		ABA79D1528C1F25F0015D872 /* NickNameSetScene */ = {
+			isa = PBXGroup;
+			children = (
+				ABA79D1728C1F2940015D872 /* View */,
+				ABA79D1628C1F28C0015D872 /* ViewModel */,
+			);
+			path = NickNameSetScene;
+			sourceTree = "<group>";
+		};
+		ABA79D1628C1F28C0015D872 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ABA79D1A28C1F5F10015D872 /* NickNameSetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ABA79D1728C1F2940015D872 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABA79D1828C1F48B0015D872 /* NickNameSetViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		ABC8944F28BC42E500BC4AD9 /* LoginScene */ = {
@@ -320,9 +350,11 @@
 				ABC8946328BCD4B300BC4AD9 /* GoogleAuthService.swift in Sources */,
 				ABB163DA28BA217B00A5A59A /* AppleAuthService.swift in Sources */,
 				ABC8945D28BCCABF00BC4AD9 /* Storage.swift in Sources */,
+				ABA79D1928C1F48B0015D872 /* NickNameSetViewController.swift in Sources */,
 				AB32603A28BE16EB007CB4D1 /* CoreDataService.swift in Sources */,
 				ABFC340728B4671B008E87D2 /* StockTalk.xcdatamodeld in Sources */,
 				ABFC341528B4768B008E87D2 /* User.swift in Sources */,
+				ABA79D1B28C1F5F10015D872 /* NickNameSetViewModel.swift in Sources */,
 				AB32604928BE1D3B007CB4D1 /* UserModel+CoreDataProperties.swift in Sources */,
 				ABFC341728B4791F008E87D2 /* SNSLogin.swift in Sources */,
 				ABB163DD28BA2CF000A5A59A /* AuthState.swift in Sources */,
